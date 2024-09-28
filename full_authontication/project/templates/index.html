@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title  >Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+        *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+        body{
+            background: linear-gradient(120deg,#2980b9, #8e44ad);
+            
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 180px;
+        }
+        h1{
+            color: white;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+           
+            
+        }
+        button{
+            padding: 6px 10px;
+            background-color: white;
+            border-radius: 12px;
+           border: none;
+           padding: 10px 40px;
+        }
+        .btn a{
+            text-decoration: none;
+            font-weight: 700;
+            color: #2980b9;
+            font-size: 16px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="box">
+    <h1>Hello world</h1>
+    <P>This is the home page of our website</P></div>
+    <br><br>
+    {% csrf_token %}
+    <div class="btn">
+   <button> <a href="{% url "logout" %}">Logout</a></div></body></button>
+</body>
+</html>
